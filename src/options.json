@@ -1,0 +1,25 @@
+{
+    "title": "React compile url loader",
+    "type": "object",
+    "properties": {
+        "test": {
+            "description": "Match pattern",
+            "anyOf": [
+                {
+                    "type": "string"
+                },
+                {
+                    "instanceof": "RegExp"
+                }
+            ]
+        },
+        "filename": {
+            "description": "Output file name.",
+            "type": "string"
+        }
+    },
+    "required": [
+        "filename",
+        "test"
+    ]
+}

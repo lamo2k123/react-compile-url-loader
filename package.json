@@ -1,0 +1,47 @@
+{
+  "name": "react-compile-url-loader",
+  "version": "1.0.0",
+  "description": "React compile url loader",
+  "main": "dist/index.js",
+  "type": "commonjs",
+  "types": "dist/types/index.d.ts",
+  "keywords": [
+    "webpack-loader",
+    "webpack",
+    "loader",
+    "react",
+    "compile"
+  ],
+  "homepage": "https://github.com/lamo2k123/react-compile-url-loader",
+  "bugs": {
+    "url": "https://github.com/lamo2k123/react-compile-url-loader/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lamo2k123/react-compile-url-loader"
+  },
+  "scripts": {
+    "start": "npm run build -- -w",
+    "build": "tsc -P tsconfig.json"
+  },
+  "author": {
+    "name": "Aleksey Novikov",
+    "email": "lamo2k123@gmail.com",
+    "url": "https://github.com/lamo2k123"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=18",
+    "npm": ">=8"
+  },
+  "devDependencies": {
+    "@types/loader-utils": "2.0.3",
+    "@types/node": "18.15.5",
+    "@types/react-dom": "18.0.11",
+    "loader-utils": "3.2.1",
+    "typescript": "5.0.2"
+  },
+  "peerDependencies": {
+    "react-dom": "*"
+  }
+}
