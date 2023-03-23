@@ -8,12 +8,15 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             -   uses: actions/checkout@v3
+            -   run: |
+                    git config --global user.name "$(git --no-pager log --format=format:'%an' -n 1)"
+                    git config --global user.email "$(git --no-pager log --format=format:'%ae' -n 1)"
             -   uses: actions/setup-node@v3
                 with:
                     node-version: 18
                     registry-url: 'https://registry.npmjs.org/'
             -   run: npm ci
-            -   run: npm version ${{ github.event.release.tag_name }} --workspaces
+            -   run: npm version ${{ github.event.release.tag_name }}
             -   run: npm run build
             -   run: npm publish --access public
                 env:
